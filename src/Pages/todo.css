@@ -1,0 +1,9 @@
+.todo-space {
+    min-width: 500px;
+}
+
+@media (max-width: 720px) {
+    .todo-space {
+        min-width: 95vw;
+    }
+}
