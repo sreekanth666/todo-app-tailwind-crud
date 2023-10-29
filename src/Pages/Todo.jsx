@@ -43,7 +43,7 @@ function Todo() {
     }, [isUpdate])
 
     useEffect(() => {
-        const ids = allTasks.map(item => item.id)
+        const ids = allTasks?.map(item => item.id)
         setTaskID(ids)
     }, [allTasks])
 
@@ -102,14 +102,14 @@ function Todo() {
                         </div>
 
                                 {
-                                    allTasks.length > 0 ?
+                                    allTasks?.length > 0 ?
                                         <table className='table-auto w-full max-w-lg border-spacing-y-1 border-separate'>
                                             <thead>
                                                 <tr className="bg-white">
                                                     <th className='text-left p-3 rounded-l-md' colSpan={2}>Task</th>
                                                     <th className='p-3 rounded-r-md' colSpan={2}>
                                                         {
-                                                            allTasks.length > 1 ?
+                                                            allTasks?.length > 1 ?
                                                                 <i className="fa-solid fa-trash text-red-600" onClick={handleDeleteAllTask}></i>
                                                             :   ""
                                                         }
@@ -118,7 +118,7 @@ function Todo() {
                                             </thead>
                                             <tbody>
                                             {
-                                                allTasks.map((item, index) => (
+                                                allTasks?.map((item, index) => (
                                                     <tr className='border-b bg-white'>
                                                         {
                                                                 editingId === item.id ?
